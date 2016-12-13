@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "links": [
+    {
+      "rel": "via",
+      "href": "http://bosh.io/docs/openstack-cpi.html#resource-pools"
+    }
+  ],
+  "properties": {
+    "availability_zone": {
+      "description": "Availability zone to use for creating instances.",
+      "type": "string"
+    },
+    "instance_type": {
+      "description": "Type of the instance.",
+      "type": "string"
+    },
+    "key_name": {
+      "description": "Key pair name. Defaults to key pair name specified by default_key_name in global CPI settings.",
+      "type": "string"
+    },
+    "root_disk": {
+      "description": "EBS backed root disk of custom size.",
+      "properties": {
+        "size": {
+          "description": "Specifies the disk size in gigabytes.",
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "scheduler_hints": {
+      "description": "Data passed to the OpenStack Filter scheduler to influence its decision where new VMs can be placed.",
+      "type": "object"
+    },
+    "security_groups": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object",
+  "description": "Describes any IaaS-specific properties needed to create VMs.",
+  "title": "Cloud Properties"
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "cpu": {
+      "description": "Number of CPUs.",
+      "type": "integer"
+    },
+    "cpu_hot_add_enabled": {
+      "default": false,
+      "description": "Allows operator to add additional CPU resources while the VM is on.",
+      "type": "boolean"
+    },
+    "datastores": {
+      "description": "Allows operator to specify a list of ephemeral datastores for the VM. These names are exact datastore names and not regex patterns. At least one of these datastores must be accessible from clusters provided in resource_pools.cloud_properties/azs.cloud_properties or in the global CPI configuration.",
+      "type": "array"
+    },
+    "disk": {
+      "description": "Ephemeral disk size in megabytes.",
+      "type": "integer"
+    },
+    "memory_hot_add_enabled": {
+      "default": false,
+      "description": "Allows operator to add additional memory resources while the VM is on.",
+      "type": "boolean"
+    },
+    "nested_hardware_virtualization": {
+      "default": false,
+      "description": "Exposes hardware assisted virtualization to the VM.",
+      "type": "boolean"
+    },
+    "ram": {
+      "description": "RAM in megabytes.",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "cpu",
+    "ram",
+    "disk"
+  ],
+  "type": "object",
+  "description": "Describes any IaaS-specific properties needed to create VMs.",
+  "title": "Cloud Properties"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "links": [
+    {
+      "rel": "via",
+      "href": "http://bosh.io/docs/openstack-cpi.html#disk-types"
+    }
+  ],
+  "properties": {
+    "type": {
+      "description": "Volume type as configured in your OpenStack installation.",
+      "type": "string"
+    }
+  },
+  "description": "Describes any IaaS-specific properties needed to create disks.",
+  "title": "Cloud Properties",
+  "type": "object"
+}

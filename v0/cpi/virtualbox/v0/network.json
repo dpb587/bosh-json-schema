@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "links": [
+    {
+      "rel": "via",
+      "href": "http://bosh.io/docs/virtualbox-cpi.html#networks"
+    }
+  ],
+  "properties": {
+    "name": {
+      "default": "vboxnet0",
+      "description": "Name of the network.",
+      "type": "string"
+    },
+    "type": {
+      "default": "hostonly",
+      "description": "Type of the network. See VBoxManage modifyvm networking settings for valid values.",
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "description": "Describes any IaaS-specific properties for networks.",
+  "title": "Cloud Properties"
+}

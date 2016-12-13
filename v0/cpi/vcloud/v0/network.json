@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "links": [
+    {
+      "rel": "via",
+      "href": "http://bosh.io/docs/vcloud-cpi.html#networks"
+    }
+  ],
+  "properties": {
+    "name": {
+      "description": "Name of vApp network in which instance will be created.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "type": "object",
+  "description": "Describes any IaaS-specific properties for networks.",
+  "title": "Cloud Properties"
+}

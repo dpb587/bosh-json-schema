@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "links": [
+    {
+      "rel": "via",
+      "href": "http://bosh.io/docs/openstack-cpi.html#networks"
+    }
+  ],
+  "properties": {
+    "net_id": {
+      "description": "Network ID containing the subnet in which the instance will be created.",
+      "pattern": "^net-[a-f0-9\\-]{36}$",
+      "type": "string"
+    },
+    "security_groups": {
+      "description": "Array of security groups to apply for all VMs that are placed on this network. Defaults to security groups specified by default_security_groups in the global CPI settings unless security groups are specified on a resource pool for a VM.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "subnet"
+  ],
+  "type": "object",
+  "description": "Describes any IaaS-specific properties for networks.",
+  "title": "Cloud Properties"
+}

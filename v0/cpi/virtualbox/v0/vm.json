@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "links": [
+    {
+      "rel": "via",
+      "href": "http://bosh.io/docs/virtualbox-cpi.html#vm-types"
+    }
+  ],
+  "properties": {
+    "cpus": {
+      "default": 1,
+      "description": "Number of CPUs.",
+      "type": "integer"
+    },
+    "ephemeral_disk": {
+      "default": 5000,
+      "description": "Ephemeral disk size in megabytes.",
+      "type": "integer"
+    },
+    "memory": {
+      "default": 512,
+      "description": "RAM in megabytes.",
+      "type": "integer"
+    },
+    "paravirtprovider": {
+      "default": "minimal",
+      "description": "Paravirtual provider type. See VBoxManage modifyvm general settings for valid values. Default: minimal.",
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "description": "Describes any IaaS-specific properties needed to create VMs.",
+  "title": "Cloud Properties"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "links": [
+    {
+      "rel": "via",
+      "href": "http://bosh.io/docs/virtualbox-cpi.html#disk-types"
+    }
+  ],
+  "properties": {},
+  "type": "object",
+  "description": "Describes any IaaS-specific properties needed to create disks.",
+  "title": "Cloud Properties"
+}

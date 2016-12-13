@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "links": [
+    {
+      "rel": "via",
+      "href": "http://bosh.io/docs/vcloud-cpi.html#resource-pools"
+    }
+  ],
+  "properties": {
+    "cpu": {
+      "description": "Number of CPUs.",
+      "type": "integer"
+    },
+    "disk": {
+      "description": "Ephemeral disk size in megabytes.",
+      "type": "integer"
+    },
+    "ram": {
+      "description": "RAM in megabytes.",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "cpu",
+    "ram",
+    "disk"
+  ],
+  "type": "object",
+  "description": "Describes any IaaS-specific properties needed to create disks.",
+  "title": "Cloud Properties"
+}

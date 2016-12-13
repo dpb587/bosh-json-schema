@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://dpb587.github.io/bosh-json-schema/v0/cpi/disk.json",
+  "oneOf": [
+    {
+      "$ref": "https://dpb587.github.io/bosh-json-schema/v0/cpi/aws/v0/disk.json"
+    },
+    {
+      "$ref": "https://dpb587.github.io/bosh-json-schema/v0/cpi/openstack/v0/disk.json"
+    },
+    {
+      "$ref": "https://dpb587.github.io/bosh-json-schema/v0/cpi/vcloud/v0/disk.json"
+    },
+    {
+      "$ref": "https://dpb587.github.io/bosh-json-schema/v0/cpi/virtualbox/v0/disk.json"
+    },
+    {
+      "$ref": "https://dpb587.github.io/bosh-json-schema/v0/cpi/vsphere/v0/disk.json"
+    },
+    {
+      "$ref": "https://dpb587.github.io/bosh-json-schema/v0/cpi/warden/v0/disk.json"
+    }
+  ],
+  "description": "Describes any IaaS-specific properties needed to create disks.",
+  "title": "Cloud Properties"
+}
